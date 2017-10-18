@@ -1,1 +1,0 @@
-../../../../vendor/EpicEditor/js/epiceditor.js
