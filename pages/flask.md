@@ -95,7 +95,6 @@ The CMS is super simple. All Markdown files have some metadata, using a de facto
 By using this setup, we can be very flexible about the tools available to our frontend design and marketing team. Copy editing and content creation tasks can be performed by anyone on the team using [Github's editor][github-editor] or [Prose.io][prose-io] pointed at the `pages/` directory. Changes can be easily previewed upon push/commit via the automated Travis builds.
 
 ### Jinja2 Templates
-
 Once you need to go beyond plain copy and content, you start to use [Jinja2 templates][jinja2]. This is an easy-to-learn templating language that shares a lot of functionality with Python, and even includes handy [designer documentation][jinja2-designer] which doesn't assume any Python programming knowledge.
 
 The templates are located in `templates/`, and there is only a little more structure below that. A subdirectory called `layout/` contains base templates, which are used for header/footer setup or template heirarchy. This is also connected to the `layout` field in Markdown pages -- it's assumed that a certain Jinja2 template will be applied to a Markdown page based on that frontmatter metadata property. The second directory is `partials/`. This contains little template snippets that are re-usable from other templates.
