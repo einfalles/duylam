@@ -1,0 +1,10 @@
+Fabric
+cuisine
+flask
+Flask-PyMongo
+pymongo
+WTForms
+WTForms-JSON
+Flask-Login
+markdown2
+bleach

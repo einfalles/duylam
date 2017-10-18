@@ -1,0 +1,9 @@
+*.swp
+.*.swo
+.env
+*.pyc
+*.un~
+.DS_Store
+build/
+assets/gen/
+assets/.webassets-cache/
