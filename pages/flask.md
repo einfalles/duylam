@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: home
 tags:
   - internal
@@ -164,4 +164,4 @@ Obviously, minification makes things difficult to debug, which is why this is on
 [bootstrap]: http://getbootstrap.com/
 [jquery]: http://jquery.org
 [d3js]: http://d3js.org
-[underscore]: http://underscorejs.org/
+[underscore]: http://underscorejs.org/ -->
