@@ -40,12 +40,12 @@ js_all = Bundle(*['js/' + file for file in js_files],
                 filters='rjsmin', output='gen/js_all.js')
 assets.register("js_all", js_all)
 
-css_lib_files = ['bootstrap.css', 'bootstrap-theme.css']
+css_lib_files = ['normalize.css']
 css_lib = Bundle(*['lib/css/' + file for file in css_lib_files],
                  filters='cleancss', output='gen/css_lib.css')
 assets.register("css_lib", css_lib)
 
-js_lib_files = ['jquery.js', 'underscore.js', 'bootstrap.js', 'd3.js']
+js_lib_files = ['jquery.js']
 js_lib = Bundle(*['lib/js/' + file for file in js_lib_files],
                 filters='rjsmin', output='gen/js_lib.js')
 assets.register("js_lib", js_lib)
