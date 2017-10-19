@@ -1,11 +1,14 @@
-{% extends "layout/" + page.layout + ".jinja" %}
+{% extends "layout/" + pages.layout + ".jinja" %}
 
 {% block title -%}
-    {{ page.title }}
+    {{ pages.title }}
 {%- endblock title %}
 
 {% block content %}
-    {{ page.html|safe }}
-
-    <a href="{{ url_for("list") }}">&laquo; list all pages</a>
+    {{ pages.html|safe }}
+    {% with p=pages  %}
+      {% for page in p %}
+        {{page}}
+      {% endfor %}
+    {% endwith %}
 {% endblock content %}

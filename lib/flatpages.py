@@ -175,7 +175,7 @@ class FlatPages(object):
     def __iter__(self):
         """Iterate on all :class:`Page` objects.
         """
-        return self._pages.itervalues()
+        return self._pages.values()
 
     def init_app(self, app):
         """Used to initialize an application, useful for passing an app later
@@ -212,6 +212,10 @@ class FlatPages(object):
             return pages[path]
         except KeyError:
             return default
+        
+    def get_all(self):
+        pages = self._pages
+        return pages
 
     def get_or_404(self, path):
         """Returns the :class:`Page` object at ``path``, or raise Flask's
@@ -262,7 +266,8 @@ class FlatPages(object):
             page = cached[0]
         else:
             with open(filename) as fd:
-                content = fd.read().decode(self.config('encoding'))
+                # content = fd.read().decode(self.config('encoding'))
+                content = fd.read()
             page = self._parse(content, path)
             self._file_cache[filename] = page, mtime
         return page
@@ -290,7 +295,7 @@ class FlatPages(object):
         pages = {}
 
         # Fail if the root is a non-ASCII byte string. Use Unicode.
-        _walk(unicode(self.root))
+        _walk(str(self.root))
 
         return pages
 
@@ -302,7 +307,7 @@ class FlatPages(object):
         lines = iter(string.split(u'\n'))
         lines = (line for line in lines if line != "---")
         # Read lines until an empty line is encountered.
-        meta = u'\n'.join(itertools.takewhile(unicode.strip, lines))
+        meta = u'\n'.join(itertools.takewhile(str.strip, lines))
         # The rest is the content. `lines` is an iterator so it continues
         # where `itertools.takewhile` left it.
         content = u'\n'.join(lines)
