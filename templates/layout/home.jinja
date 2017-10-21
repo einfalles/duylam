@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revise This</title>
     {% block favicon -%}
-        <link rel="shortcut icon" href="/assets/img/favicon.ico">
+        <link rel="shortcut icon" href="duylam/assets/img/favicon.ico">
     {%- endblock favicon %}
 
     {% block meta_tags %}
@@ -15,11 +15,11 @@
     <link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/brutaltype/stylesheet.css?v=1">
 
     {% assets "css_lib" %}
-        <link href="{{ ASSET_URL }}" rel="stylesheet">
+        <link href="duylam{{ ASSET_URL }}" rel="stylesheet">
     {%- endassets %}
 
     {% assets "css_all" %}
-        <link href="{{ ASSET_URL }}" rel="stylesheet">
+        <link href="duylam{{ ASSET_URL }}" rel="stylesheet">
     {%- endassets %}
 
     {% block custom_css %}{% endblock custom_css -%}
@@ -52,10 +52,10 @@
     </div>
   </footer>
     {% assets "js_lib" %}
-        <script src="{{ ASSET_URL }}"></script>
+        <script src="duylam{{ ASSET_URL }}"></script>
     {%- endassets %}
     {% assets "js_all" %}
-        <script src="{{ ASSET_URL }}"></script>
+        <script src="duylam{{ ASSET_URL }}"></script>
     {%- endassets %}
     {% block custom_js %}{% endblock custom_js -%}
 </body>
