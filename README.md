@@ -8,11 +8,14 @@ platform don't have to be one and 4) I hope to encourage more designers to learn
 to program by making this available.
 
 # Todo
-- [ ] Pull images from Tumblr and store in assets
+- [x] Pull images from Tumblr and store in assets
 - [ ] Templatize case studies
+- [ ] Create custom scrollbar
+- [x] Order the pages by date in array
 - [ ] C/P html Tumblr/* to Github/*
 - [ ] Remove some projects from portfolio section
-- [ ] Create endpoints for About, Daily Dispatch, and Tags
+- [x] Create endpoints for About, Daily Dispatch, and Tags
+- [] QA on various browsers
 - [ ] Add CNAME file to enable GitHub Pages custom domain
 
 # Changelog

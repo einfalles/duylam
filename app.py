@@ -66,9 +66,39 @@ manager.add_command("assets", ManageAssets(assets))
 #
 @app.route('/')
 def index():
+    years = {
+        3008: [],
+        2017: [],
+        2016: [],
+        2015: [],
+        2014: [],
+        2013: [],
+        2011: [],
+        2010: [],
+        2009: []
+    }
     all_pages = pages.get_all()
-    return render_template("allpages.jinja", pages=all_pages)
+    for page in all_pages:
+        key_year = all_pages[page].meta['date'].year
+        years[key_year].append(all_pages[page])
+    for k,v in years.items():
+        sorted_posts = sorted(v, reverse=True,key=lambda post: post.meta['date'])
+        years[k] = sorted_posts
 
+    return render_template("allpages.jinja", years=years)
+
+# @app.route('/portfolio')
+# def view_portfolio():
+#     return "This is my portfolio"
+#
+# @app.route('/dispatch')
+# def view_dispatch():
+#     return "These are my notes"
+#
+# @app.route('/about')
+# def view_about():
+#     return "This will be a sort of manifesto"
+#
 # @app.route('/project/<path:path>/')
 # def page(path):
 #     page = pages.get_or_404(path)
@@ -84,11 +114,8 @@ from formic import FileSet
 def make_livereload_server(wsgi_app):
     server = Server(wsgi_app)
     build_cmd = "true"
-
     print("Files being monitored:")
-
     cwd = os.getcwd()
-
     for pattern in WATCH_PATTERNS:
         print( "Pattern: {0}".format(pattern))
         for filepath in FileSet(include=pattern):

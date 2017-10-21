@@ -212,8 +212,9 @@ class FlatPages(object):
             return pages[path]
         except KeyError:
             return default
-        
+
     def get_all(self):
+        result = {}
         pages = self._pages
         return pages
 

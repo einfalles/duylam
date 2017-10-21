@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="google-site-verification" content="3Q4RUdxNtl00IH3DHst2duQXhPZ4WHRBQwePrILtV6Q" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>{% block title %}Parse.ly{% endblock title %}</title>
-
+    <title>Revise This</title>
     {% block favicon -%}
-        <link rel="shortcut icon" href="/media/img/favicon.ico">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico">
     {%- endblock favicon %}
 
     {% block meta_tags %}
         <meta name="description" content="">
         <meta name="author" content="">
     {%- endblock meta_tags %}
-
+    <link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/brutaltype/stylesheet.css?v=1">
 
     {% assets "css_lib" %}
         <link href="{{ ASSET_URL }}" rel="stylesheet">
@@ -28,27 +25,38 @@
     {% block custom_css %}{% endblock custom_css -%}
 
     {% block typekit %}
-        <script type="text/javascript" src="//use.typekit.net/pzp2dul.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     {% endblock typekit %}
 </head>
 
 <body>
-    <div id="wrap">
-        <div class="container-fluid" id="main-cont">
-            {% block content %}{% endblock content %}
-        </div>
+  <nav class="nav">
+    <div class="container">
+      <span style="width: 10%;position: absolute;left: 0;text-align: center;">Home</span>
+      <ul>
+        <li><a href='/portfolio'>Portfolio</a></li>
+        <li><a href='/dispatch'>Dispatch</a></li>
+        <li><a href='/about'>About</a></li>
+        <li style='margin-right:0; margin-left:auto;'><span style="">Random koan</span></li>
+      </ul>
     </div>
-
+  </nav>
+  <main class="site-page">
+    <div class="container">
+      {% block content %}{% endblock content %}
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <span>(c) 2012–2017</span>
+    </div>
+  </footer>
     {% assets "js_lib" %}
         <script src="{{ ASSET_URL }}"></script>
     {%- endassets %}
-
     {% assets "js_all" %}
         <script src="{{ ASSET_URL }}"></script>
     {%- endassets %}
-
     {% block custom_js %}{% endblock custom_js -%}
-
 </body>
 </html>

@@ -1,5 +1,9 @@
 ---
 layout: base
+title: Tiptone
+caption: Would you like your meetings to go better?
+date: 2017-10-16
+thumbnail: https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/e35/20759856_318357938574251_5519888215017783296_n.jpg
 ---
 
 # Tiptone
