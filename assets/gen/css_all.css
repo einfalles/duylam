@@ -1,0 +1,182 @@
+/*
+* PORTFOLIO V0
+* Copyright 2017, Duylam Nguyen-Ngo
+* duylam.pleaserevise.xyz
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Formss
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+/* Base Style
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-family: 'Brutal Type', sans-serif;
+  font-size: 87.5%;
+}
+nav {
+  height: 65px;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+nav ul {
+  display: flex;
+  width: 100%;
+}
+nav ul li {
+  margin-right: 4rem;
+}
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  display: inline;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+  -webkit-transition: all 600s ease-in-out;
+  -moz-transition: all 600s ease-in-out;
+  -ms-transition: all 600s ease-in-out;
+  -o-transition: all 600s ease-in-out;
+  transition: all 600s ease-in-out;
+}
+main {
+  margin-top: 65px;
+  box-sizing: border-box;
+}
+section {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  margin-bottom: 8%;
+}
+.component-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(90%);
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+}
+.component {
+  width: 28%;
+  float: right;
+  overflow: hidden;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+.component figure {
+  margin: 0;
+  width: 100%;
+  min-height: 320px;
+  position: relative;
+}
+.component figure a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.component figure a img {
+  width: 100%;
+}
+.component figure a span {
+  position: fixed;
+  color: pink;
+  top: 0;
+  right: 40%;
+  top: 30%;
+  opacity: 0;
+  display: none;
+  z-index: 9999;
+  font-size: 2rem;
+}
+.component figure a:hover span {
+  opacity: 1;
+  display: block;
+}
+.component figure a:hover + .overlay {
+  display: block;
+  background-color: black;
+  z-index: 12;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.component figure a:hover {
+  z-index: 9999;
+  position: absolute;
+}
+.component .special-info {
+  display: flex;
+}
+.component .special-info p {
+  margin: 0;
+}
+.component .special-info span {
+  display: block;
+  margin-left: auto;
+}
+.container {
+  height: 100%;
+  padding: 0 10%;
+  box-sizing: border-box;
+  position: relative;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+[class="3008"] {
+  display: none !important;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the clearfix class.
+ * 2. The use of table rather than block is only necessary if using
+ *    :before to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
