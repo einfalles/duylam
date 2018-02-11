@@ -99,10 +99,10 @@ def index():
 # def view_about():
 #     return "This will be a sort of manifesto"
 #
-# @app.route('/project/<path:path>/')
-# def page(path):
-#     page = pages.get_or_404(path)
-#     return render_template('page.jinja', page=page)
+@app.route('/project/<path:path>/')
+def page(path):
+    page = pages.get_or_404(path)
+    return render_template('page.jinja', pages=page)
 
 
 #

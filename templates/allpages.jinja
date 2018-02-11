@@ -3,20 +3,19 @@
   {% with years=years  %}
     {% for year,year_pages in years.items() %}
       <section class="{{ year }}">
-        <span style='position:absolute;width:10%; right:0;text-align:right;'>{{ year }}</span>
+        <span class='type-num' style='position:absolute;width:10%; right:0;text-align:right;'>{{ year }}</span>
         <div class="component-wrapper clearfix">
           {% for page in year_pages %}
           <div class="component">
             <figure class='clearfix'>
-              <a href="/project/{{ page.path }}">
+              <a class="{{page.path}}" href="/project/{{ page.path }}">
                 <img src="{{ page.thumbnail }}"/>
-                <span>{{ page.caption }}</span>
               </a>
               <div class='overlay'></div>
             </figure>
             <div class='special-info clearfix'>
               <p>{{ page.title }}</p>
-              <span>{{ page.date }}</span>
+              <span class='type-num'>{{ page.date }}</span>
             </div>
           </div>
           {% endfor %}

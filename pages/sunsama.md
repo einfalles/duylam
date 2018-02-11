@@ -3,13 +3,22 @@ layout: base
 title: Sunsama
 caption: Would you like your meetings to go better?
 date: 2016-04-04
-thumbnail: https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/e35/20759856_318357938574251_5519888215017783296_n.jpg
+thumbnail: /assets/img/covers/moneysunsama-cover.jpg
 ---
 
-# Sunsama
-
-This document explains the motivation behind MuckHacker.
-
-## A CMS you can understand
-
-The code that implements the whole CMS is in a single Python file that uses Flask plus some plugins, and that everyone can read/understand with ease.
+<div class="row">
+  <div class="container flex-wrap">
+    <div class="twelve columns">
+      <figure class="">
+        <img src="https://c1.staticflickr.com/5/4253/34543861453_e5c1b6c509_o.jpg" alt="moneysunsama-1">
+      </figure>
+      <figure class="">
+        <img src="https://c1.staticflickr.com/5/4270/35224170301_c4ea3cbdd7_o.jpg" alt="moneysunsama-2">
+      </figure>
+      <figure class="">
+        <img src="https://c1.staticflickr.com/5/4239/34543861763_700d788052_o.jpg" alt="moneysunsama-3">
+      </figure>
+      <a href="http://t.umblr.com/redirect?z=https%3A%2F%2Ftedideas.files.wordpress.com%2F2014%2F11%2F140702_ted-roi-meeting.jpg&amp;t=OTI4MjBmY2ZmMWFjYTc2NTQyYTAyNTMzZGQ2NWE0MjQzYTY3MmVjZSxmbGZORklQaA%3D%3D&amp;b=t%3AMEa-nVujsuRgIvCAYwaq4g&amp;p=http%3A%2F%2Fduylam.pleaserevise.xyz%2Fpost%2F161692368703%2Fsunsama&amp;m=1" target="_blank">Image Source</a>
+    </div>
+  </div>
+</div>

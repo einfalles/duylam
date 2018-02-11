@@ -9,13 +9,14 @@ to program by making this available.
 
 # Todo
 - [x] Pull images from Tumblr and store in assets
-- [ ] Templatize case studies
+- [x] Templatize case studies
 - [ ] Create custom scrollbar
 - [x] Order the pages by date in array
-- [ ] C/P html Tumblr/* to Github/*
+- [x] C/P html Tumblr/* to Github/*
 - [ ] Remove some projects from portfolio section
 - [x] Create endpoints for About, Daily Dispatch, and Tags
-- [] QA on various browsers
+- [x] Hover state for home
+- [ ] QA on various browsers
 - [ ] Add CNAME file to enable GitHub Pages custom domain
 
 # Changelog

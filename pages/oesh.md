@@ -3,7 +3,7 @@ layout: base
 title: OESH
 caption: Watch out Nike.
 date: 2013-05-01
-thumbnail: https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/e35/20759856_318357938574251_5519888215017783296_n.jpg
+thumbnail: /assets/img/covers/moneyoesh-cover.jpg
 ---
 
 # Oesh

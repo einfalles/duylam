@@ -6,9 +6,4 @@
 
 {% block content %}
     {{ pages.html|safe }}
-    {% with p=pages  %}
-      {% for page in p %}
-        {{page}}
-      {% endfor %}
-    {% endwith %}
 {% endblock content %}

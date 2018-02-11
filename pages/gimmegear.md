@@ -3,7 +3,7 @@ layout: base
 title: GimmeGear
 caption: Google Alerts for used professional gear.
 date: 2017-01-01
-thumbnail: https://instagram.fsnc1-1.fna.fbcdn.net/t51.2885-15/e35/20759856_318357938574251_5519888215017783296_n.jpg
+thumbnail: /assets/img/covers/moneygimmegear-cover.jpg
 ---
 
 # GimmeGear

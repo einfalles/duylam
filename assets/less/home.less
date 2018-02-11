@@ -12,6 +12,11 @@
 @baseColor: #000000;
 @linkColor: @baseColor;
 
+@colors: 'black', 'red', 'blue', 'green';
+@length: length(@colors);
+@random: 'Math.ceil(Math.random() * (@{length}))';
+@randomColors: extract(@colors, @random);
+
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 - Base Styles
@@ -35,10 +40,19 @@ html {
   font-size: 87.5%;
 }
 body {}
-
+h1,h2,h3,h4,h5,h6, p { margin:0; padding:0; }
+h4 { line-height: 1.5; margin-bottom: 1rem; }
+h5 {
+  line-height: 1.66;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: rgba(0,0,0,0.38);
+  margin-bottom: 1rem;
+}
+p { line-height: 1.88; }
 nav {
   height: 65px;
-  z-index: 10;
+  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
@@ -77,6 +91,7 @@ a {
 
 main {
   margin-top: 65px;
+  padding-top: 24px;
   box-sizing: border-box;
 }
 section {
@@ -100,6 +115,35 @@ section {
   overflow: hidden;
   margin-right: 5%;
   margin-bottom: 5%;
+  // figure a + .overlay {
+  //   display:block;
+  //   height:100vh;
+  //   width:100vw;
+  //   background-color:white;
+  //   opacity: 0;
+  //   top: 0;
+  //   left: 0;
+  //   position: fixed;
+  //   z-index: -1;
+  //   -webkit-transition: all 500ms ease-in-out;
+  //   -moz-transition: all 500ms ease-in-out;
+  //   -ms-transition: all 500ms ease-in-out;
+  //   -o-transition: all 500ms ease-in-out;
+  //   transition: all 500ms ease-in-out;
+  //   overflow: auto;
+  // }
+  // figure a:hover + .overlay {
+  //   z-index: 10;
+  //   opacity: 1;
+  //   height: 100vh;
+  //   background-color: white;
+  //   -webkit-transition: all 500ms ease-in-out;
+  //   -moz-transition: all 500ms ease-in-out;
+  //   -ms-transition: all 500ms ease-in-out;
+  //   -o-transition: all 500ms ease-in-out;
+  //   transition: all 500ms ease-in-out;
+  // }
+
   figure {
     margin: 0;
     width: 100%;
@@ -116,8 +160,9 @@ section {
   figure a img { width: 100%; }
   figure a span {
     position: fixed;
-    color:pink;
+    color: #e4bb61;
     top: 0;
+    font-size: 2rem;
     right: 40%;
     top: 30%;
     opacity: 0;
@@ -125,33 +170,35 @@ section {
     z-index: 9999;
     font-size: 2rem;
   }
-  figure a:hover span {
-    opacity: 1;
-    display: block;
+  figure a {
+      z-index: 9999;
   }
-  figure a:hover + .overlay {
-    display: block;
-    background-color: black;
-    z-index: 12;
-    height: 100%;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-  figure a:hover {
-    z-index: 9999;
-    position: absolute;
-  }
+  // figure a:hover img {
+  //     position: absolute;
+  //     z-index: 13;
+  //     -webkit-transition: all 600s ease-in-out;
+  //     -moz-transition: all 600s ease-in-out;
+  //     -ms-transition: all 600s ease-in-out;
+  //     -o-transition: all 600s ease-in-out;
+  //     transition: all 600s ease-in-out;
+  // }
+  // figure a:hover span {
+  //   display: inline;
+  //   opacity:1;
+  // }
   .special-info {
     display: flex;
+    padding: 1rem 0;
+    align-items: center;
   }
   .special-info p { margin:0; }
   .special-info span {
     display:block;
     margin-left: auto;
   }
+
 }
+
 .container {
     height: 100%;
     padding: 0 10%;
@@ -165,6 +212,25 @@ section {
 [class="3008"] {
   display: none !important;
 }
+.type-num {
+  // font-size:0.9285714rem;
+  font-size:1rem;
+}
+footer {
+  display: inline-block;
+  transform: rotate(-90deg);
+  transform-origin: right;
+  position: fixed;
+  right: 32px;
+  bottom: 96px;
+  font-size: 12px;
+  .container {
+    padding: 0;
+  }
+}
+
+
+
 /*
  * Clearfix: contain floats
  *
@@ -185,4 +251,165 @@ section {
 
 .clearfix:after {
     clear: both;
+}
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeOutFromAll {
+  0% { display: block; opacity: 1; }
+  1% { display: block; opacity: 1; }
+  100% { display: none; opacity: 0; }
+}
+@-moz-keyframes fadeOutFromAll {
+  0% { display: block; opacity: 1; }
+  1% { display: block; opacity: 1; }
+  100% { display: none; opacity: 0; }
+}
+@-o-keyframes fadeOutFromAll {
+  0% { display: block; opacity: 1; }
+  1% { display: block; opacity: 1; }
+  100% { display: none; opacity: 0; }
+}
+@keyframes fadeOutFromAll {
+  0% { display: block; opacity: 1; }
+  1% { display: block; opacity: 1; }
+  100% { display: none; opacity: 0; }
+}
+
+
+//
+// PROJECTS
+//
+figure {
+  margin: 0;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.projects >.container {
+  >.row { margin-bottom: 6rem; }
+}
+.row {
+  .container {
+    display: flex;
+    padding: 0;
+    >.row {
+      margin:0 4%;
+    }
+  }
+  .columns:first-child {
+    margin-left: 0;
+  }
+  .columns {
+    box-sizing: border-box;
+    margin-left: 4%;
+  }
+  .three.columns {
+    width: 25%;
+  }
+  .four.columns {
+    width:calc(100% / 3);
+  }
+  .six.columns {
+    width: 50%;
+  }
+  .twelve.columns {
+    width: 100%;
+  }
+  .title h5 {
+    text-align: center;
+  }
+  .title .divider {
+    height: 1px;
+    width: 18px;
+    display: block;
+    background-color: rgba(0,0,0,0.25);
+    margin: 0 auto 2rem auto;
+  }
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.row .container .columns.figure-full {
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 1.75rem;
+}
+.columns.split-image {
+  margin-bottom: 1.75rem;
+}
+
+.project-header {
+  margin-bottom: 3.42rem;
 }
