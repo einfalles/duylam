@@ -6,7 +6,7 @@ from flask import Flask, render_template
 from flask_script import Manager
 from flask_frozen import Freezer
 from flask_assets import Environment, Bundle, ManageAssets
-# from flask_flatpages import FlatPages
+from flask_flatpages import FlatPages
 from lib.mdjinja import MarkdownJinja
 from lib.flatpages import FlatPages
 
@@ -30,7 +30,7 @@ WATCH_PATTERNS = (
 
 assets = Environment(app)
 
-css_files = ['home.less']
+css_files = ['home.less','atoms.less','molecules.less','organisms.less']
 css_all = Bundle(*['less/' + file for file in css_files],
                  filters=['less', 'cleancss'], output='gen/css_all.css')
 assets.register("css_all", css_all)
@@ -67,7 +67,6 @@ manager.add_command("assets", ManageAssets(assets))
 @app.route('/')
 def index():
     years = {
-        3008: [],
         2017: [],
         2016: [],
         2015: [],
@@ -86,6 +85,7 @@ def index():
         years[k] = sorted_posts
 
     return render_template("allpages.jinja", years=years)
+    # return render_template('test.jinja')
 
 # @app.route('/portfolio')
 # def view_portfolio():
@@ -99,6 +99,7 @@ def index():
 # def view_about():
 #     return "This will be a sort of manifesto"
 #
+
 @app.route('/project/<path:path>/')
 def page(path):
     page = pages.get_or_404(path)
@@ -132,6 +133,7 @@ def make_livereload_server(wsgi_app):
 @manager.command
 def build():
     """Creates a static version of site in ./build."""
+    freezer.register_generator(index)
     freezer.freeze()
 
 

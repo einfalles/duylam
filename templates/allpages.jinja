@@ -1,26 +1,29 @@
 {% extends "layout/home.jinja" %}
 {% block content %}
-  {% with years=years  %}
-    {% for year,year_pages in years.items() %}
-      <section class="{{ year }}">
-        <span class='type-num' style='position:absolute;width:10%; right:0;text-align:right;'>{{ year }}</span>
-        <div class="component-wrapper clearfix">
-          {% for page in year_pages %}
-          <div class="component">
-            <figure class='clearfix'>
-              <a class="{{page.path}}" href="/project/{{ page.path }}">
-                <img src="{{ page.thumbnail }}"/>
-              </a>
-              <div class='overlay'></div>
-            </figure>
-            <div class='special-info clearfix'>
-              <p>{{ page.title }}</p>
-              <span class='type-num'>{{ page.date }}</span>
-            </div>
-          </div>
-          {% endfor %}
+{% with years=years %}
+{% for year,year_pages in years.items() %}
+
+  <section class="o-projectSet {{ year }}">
+    <span class="o-projectSet__tag">{{ year }}</span>
+    <div class="component-wrapper clearfix">
+      {% for page in year_pages %}
+      <div class="component">
+        <figure class='clearfix'>
+          <a class="{{page.path}}" href="/project/{{ page.path }}">
+            <img src="{{ page.thumbnail }}"/>
+          </a>
+          <div class='overlay'></div>
+        </figure>
+        <div class='special-info clearfix'>
+          <p>{{ page.title }}</p>
+          <span class='type-num'>{{ page.date }}</span>
         </div>
-      </section>
-    {% endfor %}
-  {% endwith %}
+      </div>
+      {% endfor %}
+    </div>
+    <div class="o-projectSet__blanket"></div>
+  </section>
+
+{% endfor %}
+{% endwith %}
 {% endblock content %}
