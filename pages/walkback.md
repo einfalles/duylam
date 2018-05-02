@@ -4,6 +4,11 @@ title: WalkBack
 caption: Safety can be sexy too.
 date: 2013-06-01
 thumbnail: /assets/img/covers/moneywalkback-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: primary
 ---
 
 # WalkBack

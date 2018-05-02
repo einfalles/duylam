@@ -4,6 +4,11 @@ title: OESH
 caption: Watch out Nike.
 date: 2013-05-01
 thumbnail: /assets/img/covers/moneyoesh-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: primary
 ---
 
 # Oesh

@@ -4,6 +4,11 @@ title: Jeffersat
 caption: This is here because I sent something into space.
 date: 2013-04-26
 thumbnail: /assets/img/covers/moneyjeffersat-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: primary
 ---
 
 # Jeffersat

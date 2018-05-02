@@ -4,6 +4,11 @@ title: Nozzle
 caption: Do you want to be the first to play dope games?
 date: 2016-10-01
 thumbnail: /assets/img/covers/moneynozzle-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: primary
 ---
 
 # Nozzle

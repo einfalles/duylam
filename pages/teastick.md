@@ -4,6 +4,11 @@ title: Teastick
 caption: The first thing I ever made.
 date: 2009-09-01
 thumbnail: /assets/img/covers/moneyteastick-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: secondary
 ---
 
 # Teastick

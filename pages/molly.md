@@ -4,6 +4,11 @@ title: Molly
 caption: A chatbot before chatbots were CHATBOTS.
 date: 2013-10-31
 thumbnail: /assets/img/covers/moneymolly-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: primary
 ---
 
 # Molly

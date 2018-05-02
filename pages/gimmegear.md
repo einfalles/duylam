@@ -4,6 +4,11 @@ title: GimmeGear
 caption: Google Alerts for used professional gear.
 date: 2017-01-01
 thumbnail: /assets/img/covers/moneygimmegear-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: primary
 ---
 
 # GimmeGear

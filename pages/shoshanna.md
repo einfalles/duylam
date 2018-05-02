@@ -4,6 +4,11 @@ title: SHOSHANNA
 caption: Making mixtapes matter again.
 date: 2015-05-26
 thumbnail: /assets/img/covers/moneyshoshanna-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: primary
 ---
 
 # Shoshanna

@@ -4,6 +4,11 @@ title: Reachd
 caption: Flaky friends? Here's a fix.
 date: 2013-10-01
 thumbnail: /assets/img/covers/moneyreachd-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: primary
 ---
 
 # Reachd

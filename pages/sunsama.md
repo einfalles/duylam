@@ -4,6 +4,11 @@ title: Sunsama
 caption: Would you like your meetings to go better?
 date: 2016-04-04
 thumbnail: /assets/img/covers/moneysunsama-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: primary
 ---
 
 <div class="row">

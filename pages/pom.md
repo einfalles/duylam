@@ -4,6 +4,11 @@ title: POM
 caption: Distributed therapy. Does this make therapy less stigmatized?
 date: 2011-08-14
 thumbnail: /assets/img/covers/moneyPOM-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: primary
 ---
 
 # POM

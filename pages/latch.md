@@ -4,6 +4,11 @@ title: Latch
 caption: Never use a key again.
 date: 2014-05-01
 thumbnail: /assets/img/covers/moneylatch-cover.jpg
+heroImage: /assets/img/covers/tunesmash/overview.png
+services: algorithm design, 3d modeling
+outcome: Made money
+deliverable: Interactive web application
+hero: primary
 ---
 
 # Latch

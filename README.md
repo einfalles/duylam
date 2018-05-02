@@ -10,20 +10,30 @@ to program by making this available.
 # Todo
 - [x] Pull images from Tumblr and store in assets
 - [x] Templatize case studies
-- [ ] Create custom scrollbar
 - [x] Order the pages by date in array
 - [x] C/P html Tumblr/* to Github/*
-- [ ] Remove some projects from portfolio section
 - [x] Create endpoints for About, Daily Dispatch, and Tags
 - [x] Hover state for home
-- [ ] QA on various browsers
+- [x] Write code for project pages
+- [x] Understand Markdown
+- [x] Make title headings possible in Markdown
+- [x] Fix the color issue for links
+- [x] Create icon for home button
+- [x] Add icon for home button
+- [x] Port portfolio page from tumblr
+- [x] Remove some projects from portfolio section
+- [x] Fix about page so it doesn't display like every other pages
+- [x] Add another type of article style for projects like teastick
+- [x] Create custom scrollbar
+- [x] Add active state to navigation bar
+- [x] Write media queries so that desktop works
+- [x] Write media queries so that tablet works
+- [x] On Desktop, make flex wrap work
+- [x] QA on various browsers
+- [ ] Add transitions
+- [ ] Refactor CSS
+- [ ] How do we deal with the Dispatch? Maybe use are.na
+- [ ] Test the Frozen Flask functionality with the routing I have
 - [ ] Add CNAME file to enable GitHub Pages custom domain
-
-# Changelog
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-
-## 0.0.1 - 2017-10-19
-### Added
-- Forked version of Flatpages and Frozen Flask and added functions to pull all posts
-- Set up development environment
+- [ ] LATER: Add like/dislike system for articles
+- [ ] LATER: Maybe add cookies so like/dislike can be tracked

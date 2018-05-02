@@ -1,3 +1,1 @@
-jQuery(function() {
-    console.log("debug output from jQuery.");
-})
+console.log("Portfolio has initialized.");
