@@ -4,6 +4,5 @@
 *.pyc
 *.un~
 .DS_Store
-build/
 assets/.webassets-cache/
 tumblr/

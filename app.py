@@ -2,7 +2,7 @@
 
 import os
 import random
-
+import pprint
 from flask import request
 from flask import Flask, render_template
 from flask_script import Manager
@@ -16,9 +16,15 @@ from lib.flatpages import FlatPages
 #
 # Config
 #
+#
+# DEBUG = True
+# FLATPAGES_AUTO_RELOAD = DEBUG
+# FLATPAGES_EXTENSION = '.md'
+# FREEZER_RELATIVE_URLS = True
+
 app = Flask(__name__, static_folder="assets")
 app.config.from_pyfile('settings.py')
-
+# pprint.pprint(app.config)
 
 #
 # Jinja, CSS, LESS, and JS Assets
@@ -66,6 +72,15 @@ manager.add_command("assets", ManageAssets(assets))
 #
 # Utilities
 #
+def rename_files():
+    directory = '/Users/rachelgoree/development/portfolio/duylam/templates'
+    for subdir, dirs, files in os.walk(directory):
+        for filename in files:
+            if filename.find('.jinja') > 0:
+                subdirectoryPath = os.path.relpath(subdir, directory) #get the path to your subdirectory
+                filePath = os.path.join(subdirectoryPath, filename) #get the path to your file
+                newFilePath = filePath.replace(".jinja",".jinja2.html") #create the new name
+
 def project_sort(all_pages):
     years = {
         2000: [], 2017: [], 2016: [], 2015: [],
@@ -88,24 +103,24 @@ def index():
     koan = "Welcome."
     all_pages = pages.get_all()
     years = project_sort(all_pages)
-    return render_template("allpages.jinja", years=years, koan=koan,request=request)
+    return render_template("allpages.jinja2.html", years=years, koan=koan,request=request)
 
-@app.route('/portfolio')
+@app.route('/portfolio/')
 def view_portfolio():
     projects = ['siempo','latch','walkback','jiffy','sunsama','tunesmash']
     portfolio_pages = []
     for project in projects:
         portfolio_pages.append(pages.get_or_404(project))
-    return render_template('portfolio.jinja',projects=portfolio_pages)
+    return render_template('portfolio.jinja2.html',projects=portfolio_pages)
 
-@app.route('/dispatch')
+@app.route('/dispatch/')
 def view_dispatch():
-    return render_template('dispatch.jinja')
+    return render_template('dispatch.jinja2.html')
 
-@app.route('/about')
+@app.route('/about/')
 def view_about():
     page = pages.get_or_404('about')
-    return render_template('page.jinja', pages=page)
+    return render_template('page.jinja2.html', pages=page)
 
 
 @app.route('/project/<path:path>/')
@@ -124,8 +139,20 @@ def page(path):
     next_index = (page_index + 1) % len(all_pages_index)
     page_prev = all_pages_index[prev_index]
     page_next = all_pages_index[next_index]
-    return render_template('page.jinja', pages=page, next=random.choice(all_pages_index).path, page_prev=page_prev.path, page_next=page_next.path)
+    return render_template('page.jinja2.html', pages=page, next=random.choice(all_pages_index).path, page_prev=page_prev.path, page_next=page_next.path)
 
+
+@freezer.register_generator
+def page():
+    all_pages_index = []
+    all_pages = pages.get_all()
+    all_pages = project_sort(all_pages)
+
+    for year in all_pages:
+        pprint.pprint("*********************")
+        all_pages_index = all_pages_index + all_pages[year]
+    for project in all_pages_index:
+        yield {'path': project.path}
 
 #
 # livereload infra
@@ -154,7 +181,6 @@ def make_livereload_server(wsgi_app):
 @manager.command
 def build():
     """Creates a static version of site in ./build."""
-    freezer.register_generator(index)
     freezer.freeze()
 
 
@@ -162,6 +188,7 @@ def build():
 def livereload():
     """Runs the Flask development server under livereload."""
     # wire livereload to Flask via wsgi
+    # freezer.run(debug=True)
     flask_wsgi_app = app.wsgi_app
     server = make_livereload_server(flask_wsgi_app)
     # serve application

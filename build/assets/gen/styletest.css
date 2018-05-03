@@ -1,0 +1,608 @@
+/*
+* Project: Home HT GmbH
+* Author: Duylam Nguyen-Ngo & Sanjay Twisk
+* Website: home.ht
+* Date: 2018.03.22
+* Convetion: ABEM
+*/
+
+
+
+/*
+~~~~~~~~~~~~~~~
+* Resets      *
+~~~~~~~~~~~~~~~
+*/
+
+#intercom-container .intercom-launcher-discovery-frame, #intercom-container .intercom-launcher-frame {
+  bottom:-100px!important;
+}
+
+
+/*
+~~~~~~~~~~~~~~~~~~~
+* Typography      *
+~~~~~~~~~~~~~~~~~~~
+*/
+
+body h1, body h2, body h3, body h4, body h5, body h6, body p{
+    font-family: 'Exo', sans-serif!important;
+    font-weight: bold!important;
+    line-height: 1.625!important;
+    padding: 0!important;
+    margin: 0!important;
+    color: #2E3642;
+}
+
+
+body h1 {
+    font-size: 64px;
+    line-height: 1.2!important;
+}
+
+
+body h2 { font-size: 48px; }
+body h3 { font-size: 36px; }
+body h4 { font-size: 24px; }
+body h5 { font-size: 18px; }
+body h6 { font-size: 14px; }
+
+
+body p {
+    font-size: 18px;
+    font-weight: normal!important;
+    line-height: 1.8!important;
+}
+
+
+
+
+/*
+~~~~~~~~~~~~~~~~~~
+* Utilities      *
+~~~~~~~~~~~~~~~~~~
+*/
+.supersmall { max-width:88%!important;}
+.-green {}
+.-brandBlue { color: #143A49!important;}
+.-textWhite { color: #ffffff!important; }
+.-textDark { color: #000000!important;}
+.-textWarm { color: #B3B1AA!important;}
+.-textCool { color: #989EA6!important;}
+.-textLink { color: #006BE8!important;}
+.-paddingStandard { padding: 2rem!important; }
+.-paddingLeftLarge { padding-left: 10%; }
+.-paddingRightLarge { padding-right: 10%; }
+.-paddingBottomStandard { padding-bottom: 5%; }
+
+.u-spaceStandard {
+    margin:0!important;
+    display: block;
+    height: 16px!important;
+}
+
+.u-spaceMedium {
+    margin:0!important;
+    display: block;
+    height: 24px!important;
+}
+.u-spaceMedium48 {
+    margin:0!important;
+    display: block;
+    height: 48px!important;
+}
+
+
+/*
+~~~~~~~~~~~~~~
+* Atoms      *
+~~~~~~~~~~~~~~
+*/
+.a-sectionSpace--large {}
+
+.a-button {
+
+}
+.a-button.-primary{
+
+}
+
+.a-button__label {
+
+}
+
+
+/*
+~~~~~~~~~~~~~~~~~~
+* Molecules      *
+~~~~~~~~~~~~~~~~~~
+*/
+.sticky-cta {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 -4px 10px rgba(0,0,0,.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 10;
+}
+#footer-outer {
+  z-index: 1!important;
+  padding-bottom: 80px!important;
+}
+.container-wrap .signup-component {
+    position: relative;
+    margin-bottom: 40px !important;
+}
+.container-wrap .signup-component .signup-component__input {
+    border-radius: 6px !important;
+    box-shadow: 0 5px 26px rgba(177, 190, 201, 0.48) !important;
+    border-color: transparent;
+    -webkit-appearance: none;
+}
+
+.container-wrap .signup-component .signup-component__button[type="submit"] {
+    position: absolute !important;
+    top: 7px;
+    right: 7px;
+    padding: 12px !important;
+    background-color: #7ac456;
+}
+.sticky-cta--blur { display: flex!important; justify-content: center!important;
+  box-shadow:none!important;
+  background-color: none!important;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+1,1+92 */
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 92%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 92%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 92%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+.container-wrap .sticky-cta--blur .signup-component {
+    width:100%;
+    margin-bottom:0!important;
+
+}
+
+.container-wrap .sticky-cta--blur .signup-component form {
+  background-color: white;
+}
+.mehr-erfahren {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mehr-erfahren a {
+    padding: 8px 16px;
+    background-color: #2e3440!important;
+    border-radius: 5px;
+}
+.m-description {}
+.m-description--quoteFuck .span_12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m-description--quoteFuck .m-description--quoteList {
+    padding-left: 80px;
+}
+.m-description__header {}
+.m-description__header--standard {}
+.m-description__header--pair {line-height: 1.2!important;}
+.m-description__body {}
+
+.m-description--trifold,
+.o-descriptionComponent .o-descriptionComponent__trifold {
+    width: 28% !important;
+}
+ul.m-checkList__items{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.m-checkList__items li {
+    list-style: none!important;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    padding-left: 34px;
+    background: url(https://svgshare.com/i/5x7.svg) 0 6px no-repeat;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+.m-checkList--secondary .m-checkList__items li {
+    background: url(https://svgshare.com/i/5xx.svg) 0 6px no-repeat;
+
+}
+.m-checkList--brandy .m-checkList__items li {
+    background: url(https://svgshare.com/i/5x6.svg) 0 6px no-repeat;
+
+}
+.m-ratingDetails {
+    display: flex;
+    flex-direction: row;
+}
+.m-ratingDetails .m-ratingDetails__kpi {
+    line-height: 1!important;
+    padding-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-ratingDetails .m-ratingDetails__author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 8px!important;
+}
+
+/*  thanks to zach reed https://codepen.io/Bluetidepro/pen/GkpEa */
+.m-ratingDetails .m-ratingDetails__stars {
+    unicode-bidi: bidi-override;
+    color: #ffffff;
+    font-size: 25px;
+    height: 25px;
+    width: 100px;
+    position: relative;
+    padding: 0;
+    text-shadow: 0px 1px 0 #a2a2a2;
+    margin-bottom: 10px;
+}
+.m-ratingDetails__stars .m-ratingDetails__starsTop {
+    color: #ffffff;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.m-ratingDetails__stars .m-ratingDetails__starsBottom {
+    padding: 0;
+    display: block;
+    z-index: 0;
+    opacity: 0.5;
+}
+/*  bye to zach reed https://codepen.io/Bluetidepro/pen/GkpEa */
+
+
+.m-quoteDetails h1 {
+    margin-right: 1rem;
+}
+/*
+~~~~~~~~~~~~~~~~~~
+* Organisms      *
+~~~~~~~~~~~~~~~~~~
+*/
+.o-descriptionComponent { }
+
+.o-descriptionComponent .span_12 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.o-quoteImage {
+    position: relative;
+    min-height: 25rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.o-quoteImage--pushContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.o-quoteImage__wrapperText {
+    width: 100%;
+    height: auto;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.o-quoteImage__wrapperText--justifyEnd {
+    justify-content: flex-end;
+}
+.o-quoteImage__header {
+    font-family: 'Eczar',serif!important;
+    width: 50%;
+    padding-top: 64px!important;
+}
+.o-quoteImage__header--white {
+    color: #ffffff!important;
+}
+.o-quoteImage__wrapperText .o-quoteImage__content {
+    display: flex;
+}
+
+
+.o-quoteImage__wrapperText .o-quoteImage__content--justifyBetween {
+    justify-content: space-between;
+}
+
+.o-quoteImage__wrapperText .o-quoteImage__content--alignEnd {
+    align-items: flex-end;
+}
+
+
+
+.o-quoteImage__content .o-quoteImage__author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 2rem;
+}
+.o-quoteImage__wrapperImage img {
+    margin-bottom: 0!important;
+    padding: 0!important;
+}
+
+/*
+~~~~~~~~~~~~~~~~~~
+* Templates      *
+~~~~~~~~~~~~~~~~~~
+*/
+
+
+
+
+
+
+/*
+~~~~~~~~~~~~~~~~~~
+* Media Query      *
+~~~~~~~~~~~~~~~~~~
+*/
+@media only screen and (min-width:1000px) {
+    .sticky-cta--blur { display: flex; justify-content: center;}
+    .sticky-cta--blur .signup-component {
+        width:45%;
+    }
+}
+
+
+@media only screen and (max-width: 1300px) and (min-width: 1000px) {
+  body h1 { font-size: 48px!important; line-height: 1.2!important; }
+  body h2 { font-size: 36px!important; }
+  body h3 { font-size: 24px!important; }
+  body h4 { font-size: 20px!important; }
+  body h5 { font-size: 16px!important; }
+  body h6 { font-size: 12px!important; }
+  body p { font-size: 16px!important; font-weight: normal!important; line-height: 1.8!important; }
+  body .o-descriptionComponent .vc_col-sm-8 { width:100%!important; }
+  .m-description--quoteFuck .download-buttons .span_12 { flex-direction: row!important;justify-content:space-between!important; }
+  .seriously-show-this.mobile-50 { width: 48%!important; margin-bottom:0!important;}
+  .o-quoteImage__header {padding-top:0px!important;}
+
+  .instance-1 .o-descriptionComponent .span_12 .vc_col-sm-4.m-description {width:40%!important;}
+  .instance-1 .o-descriptionComponent .span_12 .vc_col-sm-8.instance-3 {width:60%!important;}
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 999px)  {
+    body h1 { font-size: 36px!important; line-height: 1.2!important; }
+    body h2 { font-size: 28px!important; }
+    body h3 { font-size: 24px!important; }
+    body h4 { font-size: 20px!important; }
+    body h5 { font-size: 16px!important; }
+    body h6 { font-size: 12px!important; }
+    body p { font-size: 16px!important; font-weight: normal!important; line-height: 1.8!important; }
+
+    .container {max-width: 600px;}
+
+    /*  CTA */
+    .instance-3 { padding: 0px!important;}
+    /*  Trifold */
+    .instance-5 .o-descriptionComponent  .span_12 { flex-direction: row; }
+    /*  trifold for video */
+
+    /*  header for video */
+    .instance-11 {     flex: 0 0 100%; }
+
+    .instance-29 {margin-bottom: 0!important;}
+
+    /*  tallys*/
+    .vc_custom_1521654509040 {padding: 0!important;}
+
+    .vc_custom_1521654509040 .span_12{flex-direction: row!important;}
+    .instance-19, .instance-20 {width: 50%!important; }
+
+
+    .m-description--quoteFuck .download-buttons .span_12 { flex-direction: row!important;justify-content:space-between!important; }
+    .seriously-show-this.mobile-50 { width: 48%!important; margin-bottom:0!important;}
+
+    body .o-descriptionComponent .vc_col-sm-8 { width:100%!important; }
+    .o-quoteImage__wrapperText .o-quoteImage__content--479reset {
+        align-items: flex-start!important;
+        justify-content: flex-start!important;
+        flex-direction: column;
+    }
+    .o-descriptionComponent .span_12 { flex-direction: column;}
+    .o-descriptionComponent--flexRow .span_12 {flex-direction: row;}
+    .o-quoteImage__content.o-quoteImage__content--479reset .o-quoteImage__author{
+        padding-bottom:1rem;
+    }
+
+
+    .m-description--quoteFuck .span_12 {flex-direction: row;}
+    .m-description--quoteFuck .m-description--quoteList {padding-left:48px!important;}
+    .m-checkList__items li {font-size: 16px!important;}
+}
+
+
+@media only screen and (min-width: 690px) and (max-width: 767px)  {
+
+    body h1 { font-size: 36px!important; line-height: 1.2!important; }
+    body h2 { font-size: 28px!important; }
+    body h3 { font-size: 24px!important; }
+    body h4 { font-size: 20px!important; }
+    body h5 { font-size: 16px!important; }
+    body h6 { font-size: 12px!important; }
+    body p { font-size: 16px!important; font-weight: normal!important; line-height: 1.8!important; }
+    body .o-descriptionComponent .vc_col-sm-8 { width:100%!important; }
+    .container {max-width: 600px;}
+    .instance-17 .divider,.instance-21 .divider { height: 96px!important; }
+    .m-description--quoteFuck .span_12 {flex-direction: column;}
+    .o-quoteImage__wrapperImage img.u-fullWidth--tablet {
+        width: 100%!important;
+        height: auto!important;
+    }
+
+    .m-description--quoteFuck .download-buttons .span_12 { flex-direction: row!important;justify-content:space-between!important; }
+    .seriously-show-this.mobile-50 { width: 48%!important; margin-bottom:0!important;}
+    body .o-descriptionComponent .vc_col-sm-8 { width:100%!important; }
+    .o-descriptionComponent .span_12 {display: block;}
+    .o-descriptionComponent .span_12 .-paddingLeftStandard {padding: 0!important;}
+    .o-quoteImage__wrapperText { padding:2rem;}
+    .o-quoteImage__wrapperText .o-quoteImage__header {padding: 0px!important;width:100%;line-height:42px!important;}
+    .o-quoteImage__wrapperText .o-quoteImage__content { flex-direction:row; }
+    .o-quoteImage__content .o-quoteImage__author {padding-top:0rem;padding-bottom:1rem;}
+
+    .o-quoteImage__wrapperImage { overflow:hidden; max-height:700px;}
+    .o-quoteImage__wrapperImage img {
+        display: block;
+        height:500px!important;
+        max-width:none!important;
+        box-shadow:none!important;
+        margin-left:0;
+    }
+    .o-quoteImage__wrapperText .o-quoteImage__content--479reset {
+        align-items: flex-start!important;
+        justify-content: space-between;
+    }
+
+    .vc_col-sm-4.m-description.wpb_column.column_container.vc_column_container.col.no-extra-padding.instance-2 .divider-wrap { display: block; height: 1px!important; }
+    .m-description__body.-textWarm .divider-wrap {display: block;height: 24px!important;margin-bottom:0!important;}
+    .m-description--trifold {
+        width: 100%!important;
+    }
+
+
+    .m-description--quoteFuck .m-description--quoteList {
+        padding-top: 3rem;
+        padding-left: 0!important;
+    }
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 689px)  {
+    body h1 { font-size: 36px!important; line-height: 1.2!important; }
+    body h2 { font-size: 28px!important; }
+    body h3 { font-size: 24px!important; }
+    body h4 { font-size: 20px!important; }
+    body h5 { font-size: 16px!important; }
+    body h6 { font-size: 12px!important; }
+    body p { font-size: 16px!important; font-weight: normal!important; line-height: 1.8!important; }
+    body .o-descriptionComponent .vc_col-sm-8 { width:100%!important; }
+
+    .instance-17 .divider,.instance-21 .divider { height: 96px!important; }
+    .m-description--quoteFuck .span_12 {
+        flex-direction: column;
+    }
+    .o-quoteImage__wrapperImage img.u-fullWidth--tablet {
+        width: 100%!important;
+        height: auto!important;
+    }
+
+    .m-description--quoteFuck .download-buttons .span_12 { flex-direction: row!important;justify-content:space-between!important; }
+    .seriously-show-this.mobile-50 { width: 48%!important; margin-bottom:0!important;}
+    body .o-descriptionComponent .vc_col-sm-8 { width:100%!important; }
+    .o-descriptionComponent .span_12 {display: block;}
+    .o-descriptionComponent .span_12 .-paddingLeftStandard {padding: 0!important;}
+    .o-quoteImage__wrapperText { padding:2rem;}
+    .o-quoteImage__wrapperText .o-quoteImage__header {padding: 0px!important;width:100%;line-height:42px!important;}
+    .o-quoteImage__wrapperText .o-quoteImage__content { flex-direction:column; }
+    .o-quoteImage__content .o-quoteImage__author {padding-top:4rem;padding-bottom:1rem;}
+
+    .o-quoteImage__wrapperImage { overflow:hidden; }
+    .o-quoteImage__wrapperImage img {
+        display: block;
+        height:500px!important;
+        max-width:none!important;
+        box-shadow:none!important;
+        margin-left:0;
+    }
+    .o-quoteImage__wrapperText .o-quoteImage__content--479reset {
+        align-items: flex-start!important;
+        justify-content: flex-start!important;
+    }
+
+    .vc_col-sm-4.m-description.wpb_column.column_container.vc_column_container.col.no-extra-padding.instance-2 .divider-wrap { display: block; height: 1px!important; }
+    .m-description__body.-textWarm .divider-wrap {display: block;height: 24px!important;margin-bottom:0!important;}
+    .m-description--trifold {
+        width: 100%!important;
+    }
+
+
+    .m-description--quoteFuck .m-description--quoteList {
+        padding-top: 3rem;
+        padding-left: 0!important;
+    }
+
+}
+
+@media only screen and (max-width: 479px) {
+    body h1 {font-size: 36px!important;line-height: 1.2!important;}
+    body h2 { font-size: 28px!important; }
+    body h3 { font-size: 24px!important; }
+    body h4 { font-size: 20px!important; }
+    body h5 { font-size: 16px!important; }
+    body h6 { font-size: 12px!important; }
+    body p { font-size: 16px!important; font-weight: normal!important; line-height: 1.8!important; }
+
+    .instance-17 .divider,.instance-21 .divider { height: 96px!important; }
+    .m-description--quoteFuck .span_12 {
+        flex-direction: column;
+    }
+    .m-description--quoteFuck .download-buttons .span_12 { flex-direction: row!important;justify-content:space-between!important; }
+    .seriously-show-this.mobile-50 { width: 48%!important; margin-bottom:0!important;}
+    body .o-descriptionComponent .vc_col-sm-8 { width:100%!important; }
+    .o-descriptionComponent .span_12 {display: block;}
+    .o-descriptionComponent .span_12 .-paddingLeftStandard {padding: 0!important;}
+    .o-quoteImage__wrapperText { padding:2rem;}
+    .o-quoteImage__wrapperText .o-quoteImage__header {padding: 0px!important;width:100%;}
+    .o-quoteImage__wrapperText .o-quoteImage__content { flex-direction:column; }
+    .o-quoteImage__content .o-quoteImage__author {padding-top:4rem;padding-bottom:1rem;}
+
+    .o-quoteImage__wrapperImage { overflow:hidden; }
+    .o-quoteImage__wrapperImage img {
+        display: block;
+        height:500px!important;
+        max-width:none!important;
+        box-shadow:none!important;
+        margin-left:0;
+    }
+    .o-quoteImage__wrapperText .o-quoteImage__content--479reset {
+        align-items: flex-start!important;
+        justify-content: flex-start!important;
+    }
+
+    .vc_col-sm-4.m-description.wpb_column.column_container.vc_column_container.col.no-extra-padding.instance-2 .divider-wrap { display: block; height: 1px!important; }
+    .m-description__body.-textWarm .divider-wrap {display: block;height: 24px!important;margin-bottom:0!important;}
+    .m-description--trifold {
+        width: 100%!important;
+    }
+
+
+    .m-description--quoteFuck .m-description--quoteList {
+        padding-top: 3rem;
+        padding-left: 0!important;
+    }
+
+    #intercom-container .intercom-app .intercom-launcher-frame.intercom-launcher-frame-mobile {
+        bottom: 100px!important;
+    }
+}
