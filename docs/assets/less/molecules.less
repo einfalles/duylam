@@ -1,0 +1,275 @@
+/*
+* Project: personal portfolio 001
+* Author: Duylam Nguyen-Ngo
+* Website: duylam.pleaserevise.xyz
+* Date: 2018.04.11
+* Convention: ABEM
+* Section: organisms
+*/
+
+
+.m-navLink {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .m-navLink__wrapper {
+      width: 80vw;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin: 0 auto;
+      list-style-type: none;
+      .m-navLink__item:hover:not(.m-navLink__item--homeButton) a:before {
+        opacity:1;
+      }
+      .m-navLink__item:nth-last-child(3){
+        margin-right:0;
+      }
+      .m-navLink__item {
+        display: inline;
+        margin-right: 1rem;
+        font-size: 15px;
+        font-weight: 400;
+        a:before {
+          content: " ";
+          display: block;
+          width: 110%;
+          background-color: #F1B92B;
+          height: 2px;
+          background-position-y: 100%;
+          box-sizing: border-box;
+          position: absolute;
+          top: 7px;
+          left: -5%;
+          opacity:0;
+        }
+        a {
+          position: relative;
+          display: block;
+          line-height: 1;
+          text-decoration: none; color: #F1B92B; }
+      }
+      .m-navLink__item--koanTurn {
+        // margin-left: auto;
+        // margin-right: 0;
+        position: fixed;
+        left: 8vw;
+        bottom: 1.5rem;
+        transform-origin: bottom left;
+        transform: rotate(-90deg);
+      }
+      .m-navLink__item--homeButton {
+        position: absolute;
+        left: 10vw;
+        margin-top: 0;
+        img { max-width: 14px;}
+      }
+    }
+}
+
+.m-projectCard {
+  flex: 0 0 300px;
+  padding-left: 5vw;
+  padding-right: 0;
+  margin-bottom: 8rem;
+  box-sizing: content-box;
+  .m-projectCard__imageCover {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  .m-projectCard__projectDetails {
+    display: flex;
+    justify-content: space-between;
+  }
+  &:first-child {
+    padding-left: 10vw;
+    padding-right: 0;
+  }
+  &:last-child{
+    padding-right: 10vw;
+    padding-left: 5vw;
+  }
+  &:only-child {
+    padding-right:10vw;
+    padding-left:10vw;
+    flex: 0 0 300px;
+  }
+  &:first-child:nth-last-child(2) {
+    padding-right: 2.5vw;
+  }
+  &:first-child:nth-last-child(2) + :last-child {
+    padding-left: 2.5vw;
+  }
+}
+.m-copyright {
+  margin-bottom: 1.25rem;
+  opacity:0.1;
+  p { font-size: 13px; font-weight: 600; text-align: right; }
+}
+.m-projectContent {
+  h5 { margin-top: 3rem; margin-bottom: 1rem; }
+  hr { margin-bottom: 2rem; }
+  p { margin-bottom: 1rem; padding: 0 4vw; display:block;}
+  p img {
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+    margin-left: -4vw;
+  }
+}
+.m-navLeftRight {
+  line-height: 1;
+  display: flex;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 2rem;
+  > * {
+    line-height: 1;
+    width: 50%;
+    text-align: center;
+    a {
+      text-decoration: none;
+      display: block;
+      line-height: 1;
+      font-weight: 200;
+      color: black;
+    }
+  }
+}
+.m-listDetails {
+  margin-bottom: 2rem;
+  a {color:black;text-decoration: none; line-height: 1; display: block;}
+  img {
+    position: fixed;
+    top: 0;
+    right: 5vw;
+    display:none;
+    z-index: -1;
+  }
+  &:hover img {
+    display:block;
+  }
+}
+.m-navLink .m-navLink__wrapper .m-navLink__item a.active:before {
+    display: block;
+    opacity:1;
+}
+.m-projectCard__imageCover .m-projectCard__caption {
+  display: none;
+}
+@media (min-width:600px) {
+  .m-navLink {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .m-navLink__wrapper {
+        width: 80vw;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 auto;
+        list-style-type: none;
+        .m-navLink__item:hover:not(.m-navLink__item--homeButton) a:before {
+          opacity:1;
+        }
+        .m-navLink__item {
+          display: inline;
+          margin-right: 1rem;
+          font-size: 15px;
+          font-weight: 400;
+          a:before {
+            content: " ";
+            display: block;
+            width: 110%;
+            background-color: #F1B92B;
+            height: 2px;
+            background-position-y: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            top: 7.5px;
+            left: -5%;
+            opacity:0;
+          }
+          a {
+            position: relative;
+            display: block;
+            line-height: 1;
+            text-decoration: none; color: #F1B92B; }
+        }
+        .m-navLink__item--koanTurn {
+          margin-left: auto;
+          margin-right: 0;
+          position: relative;
+          transform: none;
+          bottom:0;
+          left: 0;
+        }
+        .m-navLink__item--homeButton {
+          position: absolute;
+          left: 4vw;
+          margin-top: 0;
+          img { max-width: 14px;}
+        }
+      }
+  }
+}
+@media (min-width:900px) {
+  .m-projectCard {
+    display: inline-block;
+    width: 28%;
+    padding:0;
+    margin-right: 1rem;
+
+
+    &:first-child{
+      padding: 0;
+    }
+    &:last-child{
+      padding:0;
+    }
+    &:first-child:nth-last-child(2) {padding:0;}
+    &:first-child:nth-last-child(2) + :last-child {padding:0;}
+  }
+
+  .m-projectCard__imageCover:hover {
+    z-index: 3;
+  }
+  .m-projectCard__imageCover .m-projectCard__caption {
+    display: none;
+    position: fixed;
+    top: 40%;
+    right: 0;
+    text-align: center;
+    width: 60vw;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    word-wrap: break-word;
+    h2 {
+      color: white;
+      font-weight: normal;
+    }
+  }
+  .m-projectCard__imageCover:hover .m-projectCard__caption {
+    display: block;
+  }
+  .m-projectCard__blanket {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0);
+      z-index: 2;
+      position: fixed;
+      top:0;
+      left: 0;
+  }
+  .m-projectCard__imageCover:hover ~ .m-projectCard__blanket {
+        display: block;
+        background-color: rgba(0,0,0,1);
+  }
+}
