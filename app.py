@@ -83,11 +83,20 @@ def rename_files():
 
 def project_sort(all_pages):
     years = {
-        2000: [], 2017: [], 2016: [], 2015: [],
-        2014: [], 2013: [], 2011: [], 2010: [],
+        2000: [],
+        2017: [],
+        2016: [],
+        2015: [],
+        2014: [],
+        2013: [],
+        2011: [],
+        2010: [],
         2009: []
     }
     for page in all_pages:
+        pprint.pprint("********************")
+        pprint.pprint(all_pages[page].meta)
+        pprint.pprint("********************")
         key_year = all_pages[page].meta['date'].year
         years[key_year].append(all_pages[page])
     years.pop(2000)
@@ -149,7 +158,6 @@ def page():
     all_pages = project_sort(all_pages)
 
     for year in all_pages:
-        pprint.pprint("*********************")
         all_pages_index = all_pages_index + all_pages[year]
     for project in all_pages_index:
         yield {'path': project.path}
@@ -163,10 +171,10 @@ from formic import FileSet
 def make_livereload_server(wsgi_app):
     server = Server(wsgi_app)
     build_cmd = "true"
-    print("Files being monitored:")
+    # print("Files being monitored:")
     cwd = os.getcwd()
     for pattern in WATCH_PATTERNS:
-        print( "Pattern: {0}".format(pattern))
+        # print( "Pattern: {0}".format(pattern))
         for filepath in FileSet(include=pattern):
             print("=> {0}".format(os.path.relpath(filepath, cwd)))
             server.watch(filepath, build_cmd)

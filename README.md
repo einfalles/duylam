@@ -33,7 +33,8 @@ to program by making this available.
 - [ ] Add transitions
 - [ ] Refactor CSS
 - [ ] How do we deal with the Dispatch? Maybe use are.na
-- [ ] Test the Frozen Flask functionality with the routing I have
+- [x] Test the Frozen Flask functionality with the routing I have
+- [ ] https://www.reddit.com/r/flask/comments/1u4nfe/ask_flask_flask_flatpages_with_subdirectories/
 - [ ] Add CNAME file to enable GitHub Pages custom domain
 - [ ] LATER: Add like/dislike system for articles
 - [ ] LATER: Maybe add cookies so like/dislike can be tracked
