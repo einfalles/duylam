@@ -1,5 +1,12 @@
 {% extends 'layout/home.jinja2.html' %}
 {% block content %}
+<form method="POST" action="https://api.staticman.net/v2/entry/einfalles/duylam/master">
+  <input name="options[redirect]" type="hidden" value="https://my-site.com">
+  <!-- e.g. "2016-01-02-this-is-a-post" -->
+  <label><input name="fields[project]" type="text">Name</label>
+  <label><input name="fields[likes]" type="email">E-mail</label>
+  <button type="submit">Go!</button>
+</form>
 <div class='o-dispatch'>
 {% with feed=feed %}
 {% for item in feed %}
