@@ -36,7 +36,7 @@ to program by making this available.
 - [x] How do we deal with the Dispatch? Maybe use are.na
 - [x] Add CNAME file to enable GitHub Pages custom domain
 - [x] LATER: Add like/dislike system for articles
-- [ ] ~~LATER: Maybe add cookies so like/dislike can be tracked~~
+- [x] ~~LATER: Maybe add cookies so like/dislike can be tracked~~
 - [ ] LATER: Set up promised likes on client side
 - [ ] LATER: Set up distributed counter / queue for likes
 - [x] Set up local store
