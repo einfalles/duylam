@@ -5,4 +5,5 @@
 *.un~
 .DS_Store
 assets/.webassets-cache/
+docs/assets/.webassets-cache/
 tumblr/
