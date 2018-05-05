@@ -35,8 +35,10 @@ to program by making this available.
 - [x] Test the Frozen Flask functionality with the routing I have
 - [x] How do we deal with the Dispatch? Maybe use are.na
 - [x] Add CNAME file to enable GitHub Pages custom domain
-- [ ] LATER: Add like/dislike system for articles
+- [x] LATER: Add like/dislike system for articles
 - [ ] ~~LATER: Maybe add cookies so like/dislike can be tracked~~
+- [ ] LATER: Set up promised likes on client side
+- [ ] LATER: Set up distributed counter / queue for likes
 - [x] Set up local store
 - [ ] LATER: refactor CSS
 
@@ -44,3 +46,5 @@ to program by making this available.
 - https://www.reddit.com/r/flask/comments/1u4nfe/ask_flask_flask_flatpages_with_subdirectories/
 - https://github.com/hilongjw/vue-lazyload
 - https://staticman.net/
+- https://stackoverflow.com/questions/48822264/understanding-conflict-resolution-in-firebase?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+- https://stackoverflow.com/questions/21040672/jquery-done-on-a-click-event?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa

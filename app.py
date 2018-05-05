@@ -54,7 +54,7 @@ css_lib = Bundle(*['lib/css/' + file for file in css_lib_files],
                  filters='cleancss', output='gen/css_lib.css')
 assets.register("css_lib", css_lib)
 
-js_lib_files = ['vue.js']
+js_lib_files = ['vue.js','firebase.js','jquery.js']
 js_lib = Bundle(*['lib/js/' + file for file in js_lib_files],
                 filters='rjsmin', output='gen/js_lib.js')
 assets.register("js_lib", js_lib)
