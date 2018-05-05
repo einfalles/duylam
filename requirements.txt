@@ -1,4 +1,5 @@
 click==6.7
+feedparser==5.2.1
 Flask==0.12.2
 Flask-Assets==0.12
 Flask-FlatPages==0.6

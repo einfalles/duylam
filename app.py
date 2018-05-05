@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-
 import os
 import random
 import pprint
+
 from flask import request
 from flask import Flask, render_template
 from flask_script import Manager
@@ -11,6 +11,7 @@ from flask_assets import Environment, Bundle, ManageAssets
 from flask_flatpages import FlatPages
 from lib.mdjinja import MarkdownJinja
 from lib.flatpages import FlatPages
+import lib.dewy as dewy
 
 
 #
@@ -24,7 +25,7 @@ from lib.flatpages import FlatPages
 
 app = Flask(__name__, static_folder="assets")
 app.config.from_pyfile('settings.py')
-# pprint.pprint(app.config)
+
 
 #
 # Jinja, CSS, LESS, and JS Assets
@@ -69,41 +70,7 @@ manager = Manager(app)
 manager.add_command("assets", ManageAssets(assets))
 
 
-#
-# Utilities
-#
-def rename_files():
-    directory = '/Users/rachelgoree/development/portfolio/duylam/templates'
-    for subdir, dirs, files in os.walk(directory):
-        for filename in files:
-            if filename.find('.jinja') > 0:
-                subdirectoryPath = os.path.relpath(subdir, directory) #get the path to your subdirectory
-                filePath = os.path.join(subdirectoryPath, filename) #get the path to your file
-                newFilePath = filePath.replace(".jinja",".jinja2.html") #create the new name
 
-def project_sort(all_pages):
-    years = {
-        2000: [],
-        2017: [],
-        2016: [],
-        2015: [],
-        2014: [],
-        2013: [],
-        2011: [],
-        2010: [],
-        2009: []
-    }
-    for page in all_pages:
-        pprint.pprint("********************")
-        pprint.pprint(all_pages[page].meta)
-        pprint.pprint("********************")
-        key_year = all_pages[page].meta['date'].year
-        years[key_year].append(all_pages[page])
-    years.pop(2000)
-    for k,v in years.items():
-        sorted_posts = sorted(v, reverse=True,key=lambda post: post.meta['date'])
-        years[k] = sorted_posts
-    return years
 #
 # Routes
 #
@@ -111,7 +78,7 @@ def project_sort(all_pages):
 def index():
     koan = "Welcome."
     all_pages = pages.get_all()
-    years = project_sort(all_pages)
+    years = dewy.project_sort(all_pages)
     return render_template("allpages.jinja2.html", years=years, koan=koan,request=request)
 
 @app.route('/portfolio/')
@@ -124,7 +91,8 @@ def view_portfolio():
 
 @app.route('/dispatch/')
 def view_dispatch():
-    return render_template('dispatch.jinja2.html')
+    feed = dewy.arena_pull()
+    return render_template('dispatch.jinja2.html',feed=feed)
 
 @app.route('/about/')
 def view_about():
@@ -140,7 +108,7 @@ def page(path):
     page_index = 0
     next_index = 0
     prev_index = 0
-    all_pages = project_sort(all_pages)
+    all_pages = dewy.project_sort(all_pages)
     for year in all_pages:
         all_pages_index = all_pages_index + all_pages[year]
     page_index = all_pages_index.index(page)
@@ -150,17 +118,26 @@ def page(path):
     page_next = all_pages_index[next_index]
     return render_template('page.jinja2.html', pages=page, next=random.choice(all_pages_index).path, page_prev=page_prev.path, page_next=page_next.path)
 
-
+#
+# Freezer Register
+#
 @freezer.register_generator
 def page():
     all_pages_index = []
     all_pages = pages.get_all()
-    all_pages = project_sort(all_pages)
+    all_pages = dewy.project_sort(all_pages)
 
     for year in all_pages:
         all_pages_index = all_pages_index + all_pages[year]
     for project in all_pages_index:
         yield {'path': project.path}
+
+@freezer.register_generator
+def view_dispatch():
+    feed = dewy.arena_pull()
+    for item in feed:
+        yield {'item': item}
+
 
 #
 # livereload infra

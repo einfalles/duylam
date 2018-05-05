@@ -8,6 +8,39 @@
 */
 
 
+.m-dispatchItem {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  box-sizing: border-box;
+  position: relative;
+  height: 0;
+  width: 48%;
+  padding-bottom: 48%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0,0,0,0);
+  transition: border 0.2s ease-in-out;
+  &:hover {
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+  .m-dispatchItem__content {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    img {width: 100%; display: block;}
+  }
+  &> a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 .m-navLink {
     height: 72px;
     display: flex;
@@ -161,6 +194,13 @@
   display: none;
 }
 @media (min-width:600px) {
+  .m-dispatchItem {
+    width: 32%;
+    padding-bottom: 31.585%;
+    .m-dispatchItem__content {
+      width: 90%;
+    }
+  }
   .m-navLink {
       height: 72px;
       display: flex;
@@ -240,7 +280,8 @@
     z-index: 3;
   }
   .m-projectCard__imageCover .m-projectCard__caption {
-    display: none;
+    display: block;
+    visibility: hidden;
     position: fixed;
     top: 40%;
     right: 0;
@@ -250,16 +291,25 @@
     background-size: cover;
     background-position: center;
     word-wrap: break-word;
+    opacity: 0;
     h2 {
       color: white;
       font-weight: normal;
     }
   }
   .m-projectCard__imageCover:hover .m-projectCard__caption {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.6s ease-out;
+  }
+  .m-projectCard__imageCover:not(:hover) .m-projectCard__caption {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-out;
   }
   .m-projectCard__blanket {
-      display: none;
+      display: block;
+      visibility: hidden;
       width: 100vw;
       height: 100vh;
       background-color: rgba(0,0,0,0);
@@ -269,7 +319,12 @@
       left: 0;
   }
   .m-projectCard__imageCover:hover ~ .m-projectCard__blanket {
-        display: block;
+        visibility: visible;
         background-color: rgba(0,0,0,1);
+        transition: all 0.5s ease-in-out;
+  }
+  .m-projectCard__imageCover:not(:hover) ~ .m-projectCard__blanket {
+      background-color: rgba(0,0,0,0);
+      transition: all 0.3s ease-out;
   }
 }
