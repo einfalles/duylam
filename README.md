@@ -36,7 +36,7 @@ to program by making this available.
 - [x] How do we deal with the Dispatch? Maybe use are.na
 - [x] Add CNAME file to enable GitHub Pages custom domain
 - [ ] LATER: Add like/dislike system for articles
-~~- [ ] LATER: Maybe add cookies so like/dislike can be tracked~~
+- [ ] ~~LATER: Maybe add cookies so like/dislike can be tracked~~
 - [x] Set up local store
 - [ ] LATER: refactor CSS
 
