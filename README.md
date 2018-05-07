@@ -39,6 +39,8 @@ to program by making this available.
 - [x] ~~LATER: Maybe add cookies so like/dislike can be tracked~~
 - [ ] LATER: Set up promised likes on client side
 - [ ] LATER: Set up distributed counter / queue for likes
+- [ ] Set up goals for google analytics
+- [ ] Set up a newsletter or some way for me to stay in touch with people?
 - [x] Set up local store
 - [ ] LATER: refactor CSS
 
