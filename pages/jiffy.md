@@ -4,10 +4,10 @@ title: Jiffy
 caption: Jiffy is like Lyft for moving.
 date: 2015-01-01
 thumbnail: /assets/img/covers/moneyjiffy-cover.jpg
-heroImage: /assets/img/covers/tunesmash/overview.png
-services: algorithm design, 3d modeling
-outcome: Made money
-deliverable: Interactive web application
+heroImage: /assets/img/covers/jiffy/title.png
+services: [algorithm design, 3d modeling]
+outcome: [Made money]
+deliverable: [Interactive web application]
 hero: primary
 ---
 

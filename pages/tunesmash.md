@@ -5,9 +5,9 @@ caption: TuneSmash makes a playlist two people will love.
 date: 2016-09-19
 thumbnail: /assets/img/covers/moneytunesmash-cover.jpg
 heroImage: /assets/img/covers/tunesmash/overview.png
-services: algorithm design, 3d modeling
-outcome: Made money
-deliverable: Interactive web application
+services: [algorithm design, 3d modeling]
+outcome: [Made money]
+deliverable: [Interactive web application]
 hero: primary
 ---
 

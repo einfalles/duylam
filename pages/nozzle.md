@@ -4,17 +4,16 @@ title: Nozzle
 caption: Do you want to be the first to play dope games?
 date: 2016-10-01
 thumbnail: /assets/img/covers/moneynozzle-cover.jpg
-heroImage: /assets/img/covers/tunesmash/overview.png
-services: algorithm design, 3d modeling
-outcome: Made money
-deliverable: Interactive web application
+heroImage: /assets/img/full/nozzle-cover.jpg
+services: [Product Design, iOS Programming]
+outcome: [On going development]
+deliverable: [Interface System, iOS App]
 hero: primary
 ---
 
-# Nozzle
+I conceived of Nozzle after visiting Da Lat, Viet Nam. The night market there would have a pop up arcade. Kids would pay about a dollar to play games like Flappy Birds on iPhones and Samsungs mounted to poles. Nozzle puts an arcade in your phone. We deliver you a fresh, new game every week and remove the ones from the week before. Currently, Sandrine Ngo and I are designing and developing 8 HTML5 games to release on Nozzle when it launches.
 
-This document explains the motivation behind MuckHacker.
-
-## A CMS you can understand
-
-The code that implements the whole CMS is in a single Python file that uses Flask plus some plugins, and that everyone can read/understand with ease.
+<span class='u-spaceLarge'></span>
+<div class='m-iframe-wrapper'>
+  <iframe width="540" height="304" src="https://www.youtube.com/embed/C40KugN3I3A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>

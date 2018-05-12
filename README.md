@@ -43,6 +43,7 @@ to program by making this available.
 - [ ] Set up a newsletter or some way for me to stay in touch with people?
 - [x] Set up local store
 - [ ] LATER: refactor CSS
+- [ ] Export photos from Sketch and transfer to Rachel comp
 
 ### Reference
 - https://www.reddit.com/r/flask/comments/1u4nfe/ask_flask_flask_flatpages_with_subdirectories/
