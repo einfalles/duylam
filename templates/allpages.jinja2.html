@@ -1,0 +1,32 @@
+{% extends 'layout/home.jinja2.html' %}
+{% block content %}
+{% with years=years %}
+{% for year,year_pages in years.items() %}
+
+  <section class='o-projectSet {{ year }}'>
+    <span class='o-projectSet__tag'>{{ year }}</span>
+    <div class='o-projectSet__list clearfix'>
+      {% for page in year_pages %}
+      <div class='m-projectCard m-projectCard--full'>
+        <figure class='m-projectCard__imageCover'>
+          <a class='a-linkImage' href='/project/{{ page.path }}'>
+            <img class='a-linkImage__image' src='{{ page.thumbnail }}'/>
+          </a>
+          <div class='m-projectCard__caption'>
+            <h2 style='color:white;'>{{ page.caption }}</h3>
+          </div>
+        </figure>
+        <div class='m-projectCard__projectDetails'>
+          <p>{{ page.title }}</p>
+          <p>{{ page.date }}</span>
+        </div>
+        <div class='m-projectCard__blanket'></div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+{% endfor %}
+{% endwith %}
+
+{% endblock content %}

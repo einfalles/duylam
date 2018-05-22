@@ -4,6 +4,11 @@ title: Jiffy
 caption: Jiffy is like Lyft for moving.
 date: 2015-01-01
 thumbnail: /assets/img/covers/moneyjiffy-cover.jpg
+heroImage: /assets/img/covers/jiffy/title.png
+services: [algorithm design, 3d modeling]
+outcome: [Made money]
+deliverable: [Interactive web application]
+hero: primary
 ---
 
 <div class="project-header">
@@ -139,7 +144,7 @@ thumbnail: /assets/img/covers/moneyjiffy-cover.jpg
     <div class="twelve columns figure-full">
       <figure><img src="https://c1.staticflickr.com/5/4268/35148781301_236a66cabe_o.png" alt="uber" style="width: 30%;display: block;margin: 0 auto"></figure>
     </div>
-    
+
     <div class="row">
       <div class="container">
         <div class="twelves columns">

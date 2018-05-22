@@ -7,23 +7,47 @@ and ownership has become more important to me 3) your CMS and your social media
 platform don't have to be one and 4) I hope to encourage more designers to learn
 to program by making this available.
 
-# Todo
+### Todo
 - [x] Pull images from Tumblr and store in assets
 - [x] Templatize case studies
-- [ ] Create custom scrollbar
 - [x] Order the pages by date in array
 - [x] C/P html Tumblr/* to Github/*
-- [ ] Remove some projects from portfolio section
 - [x] Create endpoints for About, Daily Dispatch, and Tags
 - [x] Hover state for home
-- [ ] QA on various browsers
-- [ ] Add CNAME file to enable GitHub Pages custom domain
+- [x] Write code for project pages
+- [x] Understand Markdown
+- [x] Make title headings possible in Markdown
+- [x] Fix the color issue for links
+- [x] Create icon for home button
+- [x] Add icon for home button
+- [x] Port portfolio page from tumblr
+- [x] Remove some projects from portfolio section
+- [x] Fix about page so it doesn't display like every other pages
+- [x] Add another type of article style for projects like teastick
+- [x] Create custom scrollbar
+- [x] Add active state to navigation bar
+- [x] Write media queries so that desktop works
+- [x] Write media queries so that tablet works
+- [x] On Desktop, make flex wrap work
+- [x] QA on various browsers
+- [x] Add transitions
+- [x] Add Brutal font back in
+- [x] Test the Frozen Flask functionality with the routing I have
+- [x] How do we deal with the Dispatch? Maybe use are.na
+- [x] Add CNAME file to enable GitHub Pages custom domain
+- [x] LATER: Add like/dislike system for articles
+- [x] ~~LATER: Maybe add cookies so like/dislike can be tracked~~
+- [ ] LATER: Set up promised likes on client side
+- [ ] LATER: Set up distributed counter / queue for likes
+- [ ] Set up goals for google analytics
+- [ ] Set up a newsletter or some way for me to stay in touch with people?
+- [x] Set up local store
+- [ ] LATER: refactor CSS
+- [x] Export photos from Sketch and transfer to Rachel comp
 
-# Changelog
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-
-## 0.0.1 - 2017-10-19
-### Added
-- Forked version of Flatpages and Frozen Flask and added functions to pull all posts
-- Set up development environment
+### Reference
+- https://www.reddit.com/r/flask/comments/1u4nfe/ask_flask_flask_flatpages_with_subdirectories/
+- https://github.com/hilongjw/vue-lazyload
+- https://staticman.net/
+- https://stackoverflow.com/questions/48822264/understanding-conflict-resolution-in-firebase?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+- https://stackoverflow.com/questions/21040672/jquery-done-on-a-click-event?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa

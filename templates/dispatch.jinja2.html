@@ -1,0 +1,15 @@
+{% extends 'layout/home.jinja2.html' %}
+{% block content %}
+<div class='o-dispatch'>
+{% with feed=feed %}
+{% for item in feed %}
+  <div class='m-dispatchItem'>
+    <div class='m-dispatchItem__content'>
+      {{item.summary|safe}}
+    </div>
+    <a href='{{item.link|safe}}'></a>
+  </div>
+{% endfor%}
+{% endwith %}
+</div>
+{% endblock content %}
