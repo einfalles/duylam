@@ -12,8 +12,7 @@ necessary over time.
 :license: BSD, see LICENSE for more details.
 """
 
-import os
-# import feedparser
+import feedparser
 
 def rename_files():
     directory = '/Users/rachelgoree/development/portfolio/duylam/templates'
@@ -45,7 +44,7 @@ def project_sort(all_pages):
         years[k] = sorted_posts
     return years
 
-# def arena_pull():
-#     url = "https://www.are.na/duylam-nguyen-ngo/dispatch-1525473726/feed/rss"
-#     feed = feedparser.parse(url)['entries']
-#     return feed
+def arena_pull():
+    url = "https://www.are.na/duylam-nguyen-ngo/dispatch-1525473726/feed/rss"
+    feed = feedparser.parse(url)['entries']
+    return feed

@@ -91,8 +91,7 @@ def view_portfolio():
 
 @app.route('/dispatch/')
 def view_dispatch():
-    # feed = dewy.arena_pull()
-    feed = 'what'
+    feed = dewy.arena_pull()
     return render_template('dispatch.jinja2.html',feed=feed)
 
 @app.route('/about/')
@@ -133,11 +132,11 @@ def page():
     for project in all_pages_index:
         yield {'path': project.path}
 
-# @freezer.register_generator
-# def view_dispatch():
-#     feed = dewy.arena_pull()
-#     for item in feed:
-#         yield {'item': item}
+@freezer.register_generator
+def view_dispatch():
+    feed = dewy.arena_pull()
+    for item in feed:
+        yield {'item': item}
 
 
 #
