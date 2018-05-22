@@ -94,6 +94,10 @@ def view_dispatch():
     feed = dewy.arena_pull()
     return render_template('dispatch.jinja2.html',feed=feed)
 
+@app.route('/CNAME')
+def create_cname():
+    return "duylam.pleaserevise.xyz"
+
 @app.route('/about/')
 def view_about():
     page = pages.get_or_404('about')
