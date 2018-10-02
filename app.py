@@ -83,7 +83,7 @@ def index():
 
 @app.route('/portfolio/')
 def view_portfolio():
-    projects = ['siempo','latch','walkback','jiffy','sunsama','tunesmash']
+    projects = ['siempo','latch','walkback','jiffy','sunsama']
     portfolio_pages = []
     for project in projects:
         portfolio_pages.append(pages.get_or_404(project))
