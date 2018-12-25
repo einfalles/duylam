@@ -4,6 +4,7 @@
 *.pyc
 *.un~
 .DS_Store
+CNAME
 assets/.webassets-cache/
 docs/assets/.webassets-cache/
 tumblr/
