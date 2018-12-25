@@ -2,14 +2,14 @@
 {% block content %}
 <div class='o-dispatch'>
 {% with feed=feed %}
-{% for item in feed %}
+{% for key,value in feed.items() %}
   <div class='m-dispatchItem'>
     <div class='m-dispatchItem__content'>
-      {{item.summary|safe}}
+      {{value['title']}}
     </div>
-    <a href='{{item.link|safe}}'></a>
+    <a href=''></a>
   </div>
-{% endfor%}
+{% endfor %}
 {% endwith %}
 </div>
 {% endblock content %}

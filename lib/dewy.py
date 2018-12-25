@@ -22,6 +22,16 @@ def rename_files():
                 subdirectoryPath = os.path.relpath(subdir, directory) #get the path to your subdirectory
                 filePath = os.path.join(subdirectoryPath, filename) #get the path to your file
                 newFilePath = filePath.replace(".jinja",".jinja2.html") #create the new name
+def post_sort(unsorted_pages):
+    portfolio_pages = {}
+    blog_pages = {}
+    for i,j in unsorted_pages.items():
+        if "blog" in i:
+            blog_pages[i] = j
+        else:
+            portfolio_pages[i] = j
+    result = [portfolio_pages,blog_pages]
+    return result
 
 def project_sort(all_pages):
     years = {

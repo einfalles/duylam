@@ -68,7 +68,8 @@ pages = FlatPages(app)
 md = MarkdownJinja(app)
 manager = Manager(app)
 manager.add_command("assets", ManageAssets(assets))
-
+all_pages = pages.get_all()
+post_divisions = dewy.post_sort(all_pages)
 
 
 #
@@ -77,8 +78,7 @@ manager.add_command("assets", ManageAssets(assets))
 @app.route('/')
 def index():
     koan = "Welcome."
-    all_pages = pages.get_all()
-    years = dewy.project_sort(all_pages)
+    years = dewy.project_sort(post_divisions[0])
     return render_template("allpages.jinja2.html", years=years, koan=koan,request=request)
 
 @app.route('/portfolio/')
@@ -91,8 +91,8 @@ def view_portfolio():
 
 @app.route('/dispatch/')
 def view_dispatch():
-    feed = dewy.arena_pull()
-    return render_template('dispatch.jinja2.html',feed=feed)
+    # feed = dewy.arena_pull()
+    return render_template('dispatch.jinja2.html',feed=post_divisions[1])
 
 @app.route('/CNAME')
 def create_cname():
@@ -138,7 +138,7 @@ def page():
 
 @freezer.register_generator
 def view_dispatch():
-    feed = dewy.arena_pull()
+    feed = post_divisions[1]
     for item in feed:
         yield {'item': item}
 
