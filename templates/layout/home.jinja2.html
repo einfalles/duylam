@@ -79,7 +79,16 @@
   <script src='{{ ASSET_URL }}'></script>
   {%- endassets %}
 
-  {% block custom_js %}{% endblock custom_js -%}
+  {% block custom_js %}
+  <script>
+    var r = window.confirm("🛠Would you like to check out the prototype portfolio?");
+    if (r== true) {
+      window.location.href = "https://www.figma.com/proto/bT7MGDDihEqOrQrU5EBRW3/Portfolio?node-id=2%3A2&scaling=scale-down-width";
+    } else {
+      console.log("Cool but really you should check out the new stuff!");
+    }
+  </script>
+  {% endblock custom_js -%}
 
 </body>
 </html>

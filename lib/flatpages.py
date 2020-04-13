@@ -121,14 +121,14 @@ class Page(object):
         """
         return '<Page %r>' % self.path
 
-    @werkzeug.cached_property
+    @werkzeug.utils.cached_property
     def html(self):
         """The content of the page, rendered as HTML by the configured
         renderer.
         """
         return self.html_renderer(self.body)
 
-    @werkzeug.cached_property
+    @werkzeug.utils.cached_property
     def meta(self):
         """A dict of metadata parsed as YAML from the header of the file.
         """
@@ -273,7 +273,7 @@ class FlatPages(object):
             self._file_cache[filename] = page, mtime
         return page
 
-    @werkzeug.cached_property
+    @werkzeug.utils.cached_property
     def _pages(self):
         """Walk the page root directory an return a dict of unicode path:
         page object.

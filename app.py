@@ -40,8 +40,7 @@ WATCH_PATTERNS = (
 assets = Environment(app)
 
 css_files = ['home.less','atoms.less','molecules.less','organisms.less']
-css_all = Bundle(*['less/' + file for file in css_files],
-                 filters=['less', 'cleancss'], output='gen/css_all.css')
+css_all = Bundle(*['less/' + file for file in css_files], filters='less', output='gen/css_all.css')
 assets.register("css_all", css_all)
 
 js_files = ['home.js']
@@ -50,8 +49,7 @@ js_all = Bundle(*['js/' + file for file in js_files],
 assets.register("js_all", js_all)
 
 css_lib_files = ['normalize.css']
-css_lib = Bundle(*['lib/css/' + file for file in css_lib_files],
-                 filters='cleancss', output='gen/css_lib.css')
+css_lib = Bundle(*['lib/css/' + file for file in css_lib_files],output='gen/css_lib.css')
 assets.register("css_lib", css_lib)
 
 js_lib_files = ['vue.js','firebase.js','jquery.js']
