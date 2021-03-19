@@ -9,7 +9,7 @@ Frozen-Flask==0.15
 future==0.16.0
 glob2==0.6
 itsdangerous==0.24
-Jinja2==2.11.1
+Jinja2==2.11.3
 livereload==2.5.1
 Markdown==2.6.9
 MarkupSafe==1.0
